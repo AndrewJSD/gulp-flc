@@ -1,0 +1,10 @@
+{
+  "path-intellisense.mappings": {
+    "@img": "${workspaceFolder}/src/img",
+    "@scss": "${workspaceFolder}/src/scss",
+    "@js": "${workspaceFolder}/src/js",
+  },
+  "path-intellisense.extensionOnImport": true,
+  "javascript.suggest.paths": false,
+  "typescript.suggest.paths": false,
+}
