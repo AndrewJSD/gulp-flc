@@ -33,13 +33,8 @@ const watcher = () => {
 const fonts = gulp.series(otf2ttf, ttf2woff, fonts2style);
 const mainTasks = gulp.series(fonts, gulp.parallel(copy, html, scss, js, images));
 
-const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
-const prod = gulp.series(reset, mainTasks);
-const compress = gulp.series(reset, mainTasks, zip);
-const deploy = gulp.series(reset, mainTasks, ftp);
-
-gulp.task("compress", compress);
-gulp.task("build", prod);
-gulp.task("svgSprite", svgSprite);
-gulp.task("dev", dev);
-gulp.task("deploy", deploy);
+export const sprite = svgSprite;
+export const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
+export const build = gulp.series(reset, mainTasks);
+export const compress = gulp.series(reset, mainTasks, zip);
+export const deploy = gulp.series(reset, mainTasks, ftp);

@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "gulp dev",
     "build": "gulp build --build",
-    "svgSprite": "gulp svgSprite",
+    "sprite": "gulp svgSprite",
     "compress": "gulp compress --build",
     "deploy": "gulp deploy --build"
   },
